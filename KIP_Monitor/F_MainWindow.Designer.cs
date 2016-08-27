@@ -46,9 +46,6 @@
             this.администрированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.пользователиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Timer_ForConnect = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.SS.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -159,46 +156,19 @@
             this.пользователиToolStripMenuItem.Name = "пользователиToolStripMenuItem";
             this.пользователиToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.пользователиToolStripMenuItem.Text = "Пользователи";
+            this.пользователиToolStripMenuItem.Click += new System.EventHandler(this.пользователиToolStripMenuItem_Click);
             // 
             // Timer_ForConnect
             // 
             this.Timer_ForConnect.Enabled = true;
+            this.Timer_ForConnect.Interval = 1000;
             this.Timer_ForConnect.Tick += new System.EventHandler(this.Timer_ForConnect_Tick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(431, 114);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 22);
-            this.label1.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(430, 172);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 22);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(429, 216);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 22);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
             // 
             // F_MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(907, 442);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.SS);
             this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -238,8 +208,5 @@
         private System.Windows.Forms.ToolStripMenuItem пользователиToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel SSL_Role;
         private System.Windows.Forms.Timer Timer_ForConnect;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
     }
 }

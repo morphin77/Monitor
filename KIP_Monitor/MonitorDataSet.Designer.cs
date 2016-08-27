@@ -20,9 +20,9 @@ namespace KIP_Monitor {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("MDS_Get_Auth_Data")]
+    [global::System.Xml.Serialization.XmlRootAttribute("MonitorDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class MDS_Get_Auth_Data : global::System.Data.DataSet {
+    public partial class MonitorDataSet : global::System.Data.DataSet {
         
         private Get_Auth_dataDataTable tableGet_Auth_data;
         
@@ -30,7 +30,7 @@ namespace KIP_Monitor {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public MDS_Get_Auth_Data() {
+        public MonitorDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace KIP_Monitor {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected MDS_Get_Auth_Data(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected MonitorDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace KIP_Monitor {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            MDS_Get_Auth_Data cln = ((MDS_Get_Auth_Data)(base.Clone()));
+            MonitorDataSet cln = ((MonitorDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace KIP_Monitor {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "MDS_Get_Auth_Data";
+            this.DataSetName = "MonitorDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/MDS_Get_Auth_Data.xsd";
+            this.Namespace = "http://tempuri.org/MonitorDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableGet_Auth_data = new Get_Auth_dataDataTable();
@@ -225,7 +225,7 @@ namespace KIP_Monitor {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            MDS_Get_Auth_Data ds = new MDS_Get_Auth_Data();
+            MonitorDataSet ds = new MonitorDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -493,7 +493,7 @@ namespace KIP_Monitor {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                MDS_Get_Auth_Data ds = new MDS_Get_Auth_Data();
+                MonitorDataSet ds = new MonitorDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -652,7 +652,7 @@ namespace KIP_Monitor {
         }
     }
 }
-namespace KIP_Monitor.MDS_Get_Auth_DataTableAdapters {
+namespace KIP_Monitor.MonitorDataSetTableAdapters {
     
     
     /// <summary>
@@ -804,7 +804,7 @@ namespace KIP_Monitor.MDS_Get_Auth_DataTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(MDS_Get_Auth_Data.Get_Auth_dataDataTable dataTable) {
+        public virtual int Fill(MonitorDataSet.Get_Auth_dataDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -817,9 +817,9 @@ namespace KIP_Monitor.MDS_Get_Auth_DataTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual MDS_Get_Auth_Data.Get_Auth_dataDataTable GetData() {
+        public virtual MonitorDataSet.Get_Auth_dataDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            MDS_Get_Auth_Data.Get_Auth_dataDataTable dataTable = new MDS_Get_Auth_Data.Get_Auth_dataDataTable();
+            MonitorDataSet.Get_Auth_dataDataTable dataTable = new MonitorDataSet.Get_Auth_dataDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -893,7 +893,7 @@ namespace KIP_Monitor.MDS_Get_Auth_DataTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(MDS_Get_Auth_Data dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(MonitorDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -903,7 +903,7 @@ namespace KIP_Monitor.MDS_Get_Auth_DataTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(MDS_Get_Auth_Data dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(MonitorDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -913,7 +913,7 @@ namespace KIP_Monitor.MDS_Get_Auth_DataTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(MDS_Get_Auth_Data dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(MonitorDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -947,7 +947,7 @@ namespace KIP_Monitor.MDS_Get_Auth_DataTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(MDS_Get_Auth_Data dataSet) {
+        public virtual int UpdateAll(MonitorDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

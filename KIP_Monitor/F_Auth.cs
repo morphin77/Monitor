@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -27,7 +28,8 @@ namespace KIP_Monitor
 
         private void b_Enter_Click(object sender, EventArgs e)
         {
-            if (tb_Password.Text == TB_PasswordBase.Text)
+
+            if (tb_Password.Text == TB_PasswordBase.Text && CB_UserName.Text!="")
             {
                 Role = TB_role_Base.Text;
                 CurrentUser = CB_UserName.Text;
@@ -44,18 +46,19 @@ namespace KIP_Monitor
 
         private void F_Auth_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "mDS_Get_Auth_Data.Get_Auth_data". При необходимости она может быть перемещена или удалена.
-            this.get_Auth_dataTableAdapter.Fill(this.mDS_Get_Auth_Data.Get_Auth_data);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "monitorDataSet1.Get_Auth_data". При необходимости она может быть перемещена или удалена.
-
-
-
-
-
-
-
+            //заполняем список пользователей
+            Sql.ConnectDb("SELECT UserName FROM Monitor.dbo.Users");
+            for (int i = 0; i < Sql.DataSet.Tables[0].Rows.Count; i++)
+            {
+                CB_UserName.Items.Add(Sql.DataSet.Tables[0].Rows[i]["UserName"].ToString());
+            }
+         }
+        
+        private void CB_UserName_TextChanged(object sender, EventArgs e)
+        {
+           Sql.ConnectDb("SELECT Password, Role  FROM Users, Role WHERE Users.UserName like '%"+CB_UserName.Text+"%' AND Role.id_role = Users.id_role");
+            TB_PasswordBase.Text = Sql.DataSet.Tables[0].Rows[0]["Password"].ToString();
+            TB_role_Base.Text = Sql.DataSet.Tables[0].Rows[0]["Role"].ToString();
         }
-
-
     }
 }

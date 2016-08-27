@@ -53,7 +53,10 @@
       <HintPath>bin\Debug\libnodave.net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -65,12 +68,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="F_3_Line_Main.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="F_3_Line_Main.Designer.cs">
-      <DependentUpon>F_3_Line_Main.cs</DependentUpon>
-    </Compile>
     <Compile Include="F_Auth.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,22 +80,33 @@
     <Compile Include="F_MainWindow.Designer.cs">
       <DependentUpon>F_MainWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="MDS_Get_Auth_Data.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MDS_Get_Auth_Data.xsd</DependentUpon>
+    <Compile Include="F_User_Create.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_User_Create.Designer.cs">
+      <DependentUpon>F_User_Create.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_User_Managment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_User_Managment.Designer.cs">
+      <DependentUpon>F_User_Managment.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SiemensPLC-319F-3.cs" />
-    <EmbeddedResource Include="F_3_Line_Main.resx">
-      <DependentUpon>F_3_Line_Main.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="SQL.cs" />
     <EmbeddedResource Include="F_Auth.resx">
       <DependentUpon>F_Auth.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_MainWindow.resx">
       <DependentUpon>F_MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_User_Create.resx">
+      <DependentUpon>F_User_Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_User_Managment.resx">
+      <DependentUpon>F_User_Managment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -109,17 +117,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="MDS_Get_Auth_Data.xsc">
-      <DependentUpon>MDS_Get_Auth_Data.xsd</DependentUpon>
-    </None>
-    <None Include="MDS_Get_Auth_Data.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>MDS_Get_Auth_Data.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="MDS_Get_Auth_Data.xss">
-      <DependentUpon>MDS_Get_Auth_Data.xsd</DependentUpon>
-    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -144,6 +142,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

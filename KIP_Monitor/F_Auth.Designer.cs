@@ -35,15 +35,10 @@
             this.b_Enter = new System.Windows.Forms.Button();
             this.b_Exit = new System.Windows.Forms.Button();
             this.CB_UserName = new System.Windows.Forms.ComboBox();
-            this.getAuthdataBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.BS_Get_Auth_Data = new System.Windows.Forms.BindingSource(this.components);
-            this.mDS_Get_Auth_Data = new KIP_Monitor.MDS_Get_Auth_Data();
             this.TB_PasswordBase = new System.Windows.Forms.TextBox();
             this.TB_role_Base = new System.Windows.Forms.TextBox();
-            this.get_Auth_dataTableAdapter = new KIP_Monitor.MDS_Get_Auth_DataTableAdapters.Get_Auth_dataTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.getAuthdataBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BS_Get_Auth_Data)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mDS_Get_Auth_Data)).BeginInit();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // l_UserName
@@ -101,7 +96,6 @@
             // 
             // CB_UserName
             // 
-            this.CB_UserName.DataSource = this.getAuthdataBindingSource;
             this.CB_UserName.DisplayMember = "UserName";
             this.CB_UserName.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CB_UserName.FormattingEnabled = true;
@@ -110,26 +104,11 @@
             this.CB_UserName.Size = new System.Drawing.Size(189, 30);
             this.CB_UserName.TabIndex = 6;
             this.CB_UserName.ValueMember = "UserName";
-            // 
-            // getAuthdataBindingSource
-            // 
-            this.getAuthdataBindingSource.DataMember = "Get_Auth_data";
-            this.getAuthdataBindingSource.DataSource = this.BS_Get_Auth_Data;
-            // 
-            // BS_Get_Auth_Data
-            // 
-            this.BS_Get_Auth_Data.DataSource = this.mDS_Get_Auth_Data;
-            this.BS_Get_Auth_Data.Position = 0;
-            // 
-            // mDS_Get_Auth_Data
-            // 
-            this.mDS_Get_Auth_Data.DataSetName = "MDS_Get_Auth_Data";
-            this.mDS_Get_Auth_Data.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.CB_UserName.TextChanged += new System.EventHandler(this.CB_UserName_TextChanged);
             // 
             // TB_PasswordBase
             // 
-            this.TB_PasswordBase.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.getAuthdataBindingSource, "Password", true));
-            this.TB_PasswordBase.Location = new System.Drawing.Point(200, 57);
+            this.TB_PasswordBase.Location = new System.Drawing.Point(200, 53);
             this.TB_PasswordBase.Name = "TB_PasswordBase";
             this.TB_PasswordBase.ReadOnly = true;
             this.TB_PasswordBase.Size = new System.Drawing.Size(100, 20);
@@ -137,16 +116,15 @@
             // 
             // TB_role_Base
             // 
-            this.TB_role_Base.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.getAuthdataBindingSource, "Role", true));
-            this.TB_role_Base.Location = new System.Drawing.Point(289, 59);
+            this.TB_role_Base.Location = new System.Drawing.Point(289, 57);
             this.TB_role_Base.Name = "TB_role_Base";
             this.TB_role_Base.ReadOnly = true;
             this.TB_role_Base.Size = new System.Drawing.Size(100, 20);
             this.TB_role_Base.TabIndex = 8;
             // 
-            // get_Auth_dataTableAdapter
+            // bindingSource1
             // 
-            this.get_Auth_dataTableAdapter.ClearBeforeFill = true;
+            this.bindingSource1.Position = 0;
             // 
             // F_Auth
             // 
@@ -154,7 +132,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.b_Exit;
-            this.ClientSize = new System.Drawing.Size(406, 151);
+            this.ClientSize = new System.Drawing.Size(399, 139);
             this.Controls.Add(this.tb_Password);
             this.Controls.Add(this.TB_PasswordBase);
             this.Controls.Add(this.CB_UserName);
@@ -167,9 +145,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
             this.Load += new System.EventHandler(this.F_Auth_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.getAuthdataBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BS_Get_Auth_Data)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mDS_Get_Auth_Data)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,10 +161,8 @@
         private System.Windows.Forms.ComboBox CB_UserName;
         private System.Windows.Forms.TextBox TB_PasswordBase;
         private System.Windows.Forms.TextBox TB_role_Base;
-        private System.Windows.Forms.BindingSource BS_Get_Auth_Data;
-        private MDS_Get_Auth_Data mDS_Get_Auth_Data;
-        private System.Windows.Forms.BindingSource getAuthdataBindingSource;
-        private MDS_Get_Auth_DataTableAdapters.Get_Auth_dataTableAdapter get_Auth_dataTableAdapter;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        
     }
 }
 
