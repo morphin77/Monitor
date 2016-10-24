@@ -51,9 +51,8 @@ namespace KIP_Monitor
 
         private void Timer_ForConnect_Tick(object sender, EventArgs e)
         {
-            string a =" ";
             SiemensPlc319F3.ConnectTo();
-            for (int i = 0; i < SiemensPlc319F3.ThirdLinePb11Errors.Length; i++)//дя массива батов ошибок ПЛК
+            for (int i = 0; i < SiemensPlc319F3.ThirdLinePb11Errors.Length; i++)//для массива байтов ошибок ПЛК
             {
                 if (SiemensPlc319F3.ThirdLinePb11Errors[i] != 0)// если байт не равн нолю (содержит ошибку)
                 {
@@ -61,19 +60,20 @@ namespace KIP_Monitor
                     { 
                         BaseArray[i] = SiemensPlc319F3.ThirdLinePb11Errors[i];//отмечам что ошибка уже зафиксирована системой
                         BitArray Bits = new BitArray(new byte[] { SiemensPlc319F3.ThirdLinePb11Errors[i] });
-                        for(int j =0; j<8;j++)
+                        for(int j =0; j<8; j++)
                         {
-                            a = a + Bits[j];
-                        }
-
-                        MessageBox.Show(a + ", номер в массиве: " + i);           //не надо бить разработчика ногами
+                           if (Bits[j] == true)
+                           {
+                                MessageBox.Show(Bits[j] + ", номер в массиве бйатов: " + i + ", номер в массиве битов: " + j); //не надо бить разработчика ногами
+                           }
+                        }                     
                     }
                 }
                 else // если байт равн нолю (не содержит ошибку)
                 {
-                    if (SiemensPlc319F3.ThirdLinePb11Errors[i] != BaseArray[i])//но в опорном массиве осталась ошибка (т.е. тепрь она сброшна)
+                    if (SiemensPlc319F3.ThirdLinePb11Errors[i] != BaseArray[i])//но в опорном массиве осталась ошибка (т.е. теперь она сброшена)
                     {
-                        BaseArray[i] = SiemensPlc319F3.ThirdLinePb11Errors[i];  //отмечам что ошибка отсутствует                     
+                        BaseArray[i] = SiemensPlc319F3.ThirdLinePb11Errors[i];  //отмечаем что ошибка отсутствует                     
                     }
                 }
             }            

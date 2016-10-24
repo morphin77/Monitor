@@ -42,7 +42,7 @@
             this.линияСортировкиБревенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.линияРаспиловкиБревенToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.линияСортировкиДосокToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.линияВыведениеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ОтводЩепыToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.администрированиеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.пользователиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Timer_ForConnect = new System.Windows.Forms.Timer(this.components);
@@ -104,7 +104,7 @@
             this.линияСортировкиБревенToolStripMenuItem,
             this.линияРаспиловкиБревенToolStripMenuItem,
             this.линияСортировкиДосокToolStripMenuItem,
-            this.линияВыведениеToolStripMenuItem,
+            this.ОтводЩепыToolStripMenuItem,
             this.администрированиеToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -136,11 +136,11 @@
             this.линияСортировкиДосокToolStripMenuItem.Size = new System.Drawing.Size(183, 20);
             this.линияСортировкиДосокToolStripMenuItem.Text = "Первичная сортировки досок";
             // 
-            // линияВыведениеToolStripMenuItem
+            // ОтводЩепыToolStripMenuItem
             // 
-            this.линияВыведениеToolStripMenuItem.Name = "линияВыведениеToolStripMenuItem";
-            this.линияВыведениеToolStripMenuItem.Size = new System.Drawing.Size(125, 20);
-            this.линияВыведениеToolStripMenuItem.Text = "Выведение отходов";
+            this.ОтводЩепыToolStripMenuItem.Name = "ОтводЩепыToolStripMenuItem";
+            this.ОтводЩепыToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.ОтводЩепыToolStripMenuItem.Text = "Отвод щепы";
             // 
             // администрированиеToolStripMenuItem
             // 
@@ -203,7 +203,7 @@
         private System.Windows.Forms.ToolStripMenuItem линияСортировкиБревенToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem линияРаспиловкиБревенToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem линияСортировкиДосокToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem линияВыведениеToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ОтводЩепыToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem администрированиеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem пользователиToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel SSL_Role;
