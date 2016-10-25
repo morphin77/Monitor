@@ -52,12 +52,13 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\libnodave.net.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
@@ -66,6 +67,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="F_Auth.cs">
@@ -73,6 +75,12 @@
     </Compile>
     <Compile Include="F_Auth.Designer.cs">
       <DependentUpon>F_Auth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="F_Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="F_Error.Designer.cs">
+      <DependentUpon>F_Error.cs</DependentUpon>
     </Compile>
     <Compile Include="F_MainWindow.cs">
       <SubType>Form</SubType>
@@ -98,6 +106,9 @@
     <Compile Include="SQL.cs" />
     <EmbeddedResource Include="F_Auth.resx">
       <DependentUpon>F_Auth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="F_Error.resx">
+      <DependentUpon>F_Error.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="F_MainWindow.resx">
       <DependentUpon>F_MainWindow.cs</DependentUpon>

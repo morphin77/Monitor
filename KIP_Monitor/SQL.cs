@@ -16,7 +16,7 @@ namespace KIP_Monitor
         public static SqlCommand Request;
         public static SqlDataAdapter SqlDataAdapter;
         public static DataSet DataSet;
-
+        
         public static void ConnectDb(string Query)
         {
             //задаем параметры подключения к серверу
@@ -32,7 +32,7 @@ namespace KIP_Monitor
             DataSet = new DataSet();
             //заполняем таблицу
             SqlDataAdapter.Fill(DataSet);
-            Connection.Close();
+            Connection.Close();         
         }
     }
 }

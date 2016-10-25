@@ -80,17 +80,17 @@
             // 
             this.SSL_Message.AutoSize = false;
             this.SSL_Message.Name = "SSL_Message";
-            this.SSL_Message.Size = new System.Drawing.Size(1100, 17);
+            this.SSL_Message.Size = new System.Drawing.Size(0, 17);
             // 
             // SSL_Time
             // 
             this.SSL_Time.Name = "SSL_Time";
-            this.SSL_Time.Size = new System.Drawing.Size(0, 0);
+            this.SSL_Time.Size = new System.Drawing.Size(0, 17);
             // 
             // SSL_Date
             // 
             this.SSL_Date.Name = "SSL_Date";
-            this.SSL_Date.Size = new System.Drawing.Size(0, 0);
+            this.SSL_Date.Size = new System.Drawing.Size(0, 17);
             // 
             // timeForDateTime
             // 
@@ -191,10 +191,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.StatusStrip SS;
-        private System.Windows.Forms.ToolStripStatusLabel SSL_User;
-        private System.Windows.Forms.ToolStripStatusLabel SSL_Message;
         private System.Windows.Forms.ToolStripStatusLabel SSL_Time;
         private System.Windows.Forms.ToolStripStatusLabel SSL_Date;
         private System.Windows.Forms.Timer timeForDateTime;
@@ -208,5 +204,8 @@
         private System.Windows.Forms.ToolStripMenuItem пользователиToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel SSL_Role;
         private System.Windows.Forms.Timer Timer_ForConnect;
+        public System.Windows.Forms.ToolStripStatusLabel SSL_Message;
+        public System.Windows.Forms.StatusStrip SS;
+        public System.Windows.Forms.ToolStripStatusLabel SSL_User;
     }
 }

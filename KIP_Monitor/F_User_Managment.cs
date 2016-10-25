@@ -21,6 +21,7 @@ namespace KIP_Monitor
         public void F_User_Managment_Load(object sender, EventArgs e)
         {
             Sql.ConnectDb("SELECT UserName, Password, Role  FROM Users, Role WHERE Role.id_role = Users.id_role");
+            
             bindingSource1.DataSource = Sql.DataSet.Tables[0];
             bindingNavigator1.BindingSource = this.bindingSource1;
             dataGridView1.DataSource = this.bindingSource1;

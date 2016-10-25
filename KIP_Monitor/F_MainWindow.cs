@@ -28,13 +28,13 @@ namespace KIP_Monitor
         }
 
         private void timeForDateTime_Tick(object sender, EventArgs e)
-        {
+        {      
             SSL_Time.Text = DateTime.Now.ToString("HH:mm:ss");
             SSL_Date.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
 
         private void F_MainWindow_Load(object sender, EventArgs e)
-        {         
+        {
             SSL_Role.Text = F_Auth.Role;
             SSL_User.Text = F_Auth.CurrentUser;
                         
@@ -64,7 +64,13 @@ namespace KIP_Monitor
                         {
                            if (Bits[j] == true)
                            {
-                                MessageBox.Show(Bits[j] + ", номер в массиве бйатов: " + i + ", номер в массиве битов: " + j); //не надо бить разработчика ногами
+                                Sql.ConnectDb("SELECT Errors_Meta_Data.Error_Description, Error_Type.Error_Type, Error_Type.Error_Type_Description FROM Errors_Meta_Data, Error_Type WHERE Errors_Meta_Data.Error_Byte like '" + i + "' AND Errors_Meta_Data.Error_Bit like '" + j + "' AND Error_Type.ID_Error_Type = Errors_Meta_Data.ID_Error_Type");
+                                for (int k = 0; k < Sql.DataSet.Tables[0].Rows.Count; k++)
+                                {
+                                    F_Error f = new F_Error();
+                                    f.rtb_Incedents_Description.Text = Sql.DataSet.Tables[0].Rows[k]["Error_Description"].ToString()+" ("+ Sql.DataSet.Tables[0].Rows[k]["Error_Type"].ToString()+": "+ Sql.DataSet.Tables[0].Rows[k]["Error_Type_Description"].ToString();
+                                    f.ShowDialog();                                                                    
+                                }              
                            }
                         }                     
                     }
